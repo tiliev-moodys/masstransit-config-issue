@@ -44,7 +44,7 @@ public static class Configurator
                 {
                     instance.ConfigureJobServiceEndpoints();
 
-                    instance.ReceiveEndpoint("my-own-endpoint", e =>
+                    cfg.ReceiveEndpoint("my-own-endpoint", e =>
                     {
                         e.PrefetchCount = 2;
                         e.ConfigureConsumer<MyJobConsumer>(context);
